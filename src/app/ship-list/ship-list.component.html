@@ -1,0 +1,15 @@
+<!-- <a *ngFor="let ship of ships">
+  <div>
+    <h4>{{ship.name}}</h4>
+    {{ship.actions.join(', ')}}
+  </div>
+</a> -->
+<div>
+  <select ng-model="selectedShip" ng-options="ship.name for ship in ships">
+  </select>
+</div>
+<select>
+  <option *ngFor="let ship of ships" value= {{ship.id}}>
+    {{ship.name}}
+  </option>
+</select>
